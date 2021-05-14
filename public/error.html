@@ -1,30 +1,99 @@
+<style>img[alt*="www.000webhost.com"] {
+    display: none;}
+code made by Titan Networks,
+img[alt="www.000webhost.com"]{display:none;}
+</style>
+<html>
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="Powerful web proxy">
-		<meta name="keywords" content="Unblocker, Powermouse, TitaniumNetwork">
-		<meta name="author" content="Divide">
-		<meta content='/pm-cgi/banner.png' property='og:image'>
-		<meta name='twitter:card' content='summary_large_image'>
-		<link type="image/x-icon" rel="shortcut icon" href='/favicon.ico'>
-		<title>Powermouse</title>
-		<link rel='stylesheet' href='/pm-cgi/main.css'>
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	</head>
-	<body>
-		<div class='wrapper'>
-			<div class='head'>
-				<h1><a class='noStyle ns' href='/'>powerMouse</a></h1>
-				<a draggable='false' href='https://github.com/titaniumnetwork-dev/cacheUnblocker'><div class='ns git'>Fork us on GitHub</div></a>
-			</div>
-			<div class='listing'>
-				<div class='inputWrapper'>
-					<h1>%TITLE%</h1>
-					<h2>%REASON%</h2>
-					<a href='/'><p>Return home</p></a>
-				</div>
-			</div>
-	</body>
+<head>
+<body style="background-color:black;">
+<title>Titan Networks Proxy</title>
+
+<meta name="generator" content="php-proxy.com">
+<meta name="version" content="<?=$version;?>">
+
+<style type="text/css">
+html body {
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 12px;
+}
+
+#container {
+	width:500px;
+	margin:0 auto;
+	margin-top:150px;
+}
+
+#error {
+	color:red;
+	font-weight:bold;
+}
+
+#frm {
+	padding:10px 15px;
+	background-color:#1f1f14;
+
+	border:1px solid #6600ff;
+
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+}
+
+#footer {
+	text-align:center;
+	font-size:10px;
+	margin-top:35px;
+	clear:both;
+}
+</style>
+
+</head>
+
+<body>
+
+
+<div id="container">
+
+	<div style="text-align:center;">
+		<h1 style="color:purple;">Titan Network Proxy</h1>
+    <h1 style="color:purple;">Fallback Page</h1>
+		<h3 style="color:blue;">NOTICE: An internal network failed had occurred. Please try again</h3>
+	</div>
+
+	<?php if(isset($error_msg)){ ?>
+
+	<div id="error">
+		<p><?php echo $error_msg; ?></p>
+	</div>
+
+	<?php } ?>
+<!--
+	<div id="frm">
+	-->
+	<!-- I wouldn't touch this part -->
+
+		<!--<form action="index.php" method="post" style="margin-bottom:0;">
+			<input name="url" type="text" style="width:400px;" autocomplete="off" placeholder="http://" />
+			<input type="submit" value="Go" />
+		</form>
+
+		<script type="text/javascript">
+			document.getElementsByName("url")[0].focus();
+		</script>
+	--><center>
+	<a style="background-color: white;padding: 5px;border-radius: 5px;" href="/">Home</a></center>
+	<!-- [END] -->
+
+	</div>
+
+</div>
+	
+<div id="footer">
+	Powered by <a href="#" target="_blank">Titan Network</a>
+</div>
+
+
+</body>
 </html>
