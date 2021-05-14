@@ -1,5 +1,4 @@
 {
-  "name": "lolwontfindme",
   "description": "Web proxy for evading internet censorship",
   "author": "Nathan Friedly - http://nfriedly.com",
   "version": "1.0.0",
@@ -7,7 +6,7 @@
   "homepage": "https://github.com/nfriedly/nodeunblocker.com/",
   "dependencies": {
     "express": "^4.13.0",
-    "gatling": "^2.0.0",
+    "gatling": "^1.2.0",
     "newrelic": "^1.20.2",
     "through": "^2.3.8",
     "unblocker": "^2.2.0",
