@@ -1,47 +1,37 @@
-# nodeunblocker.com
+# titanium-p2
+P2 site code, people wanted this to be released for a while so I'm doing it.
 
-Evade internet censorship!
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/titaniumnetwork-dev/titanium-p2)
 
-The original nodeunblocker.com is gone, but it's now easier than ever to deploy your own copy.
+# Local Alloy Proxy
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/nfriedly/nodeunblocker.com)
-[![Deploy to Bluemix](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/nfriedly/nodeunblocker.com)
-[![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
-[![Deploy to AWS](https://oneclick.amplifyapp.com/button.svg)](https://console.aws.amazon.com/amplify/home#/deploy?repo=https://github.com/nfriedly/nodeunblocker.com)
+This site contains a local Alloy Proxy server.
 
-## Now with YouTube support (sort of)
+If you are not using Heroku, here's the gist of how you get this going:
 
-I went ahead and activated the [youtube example](https://github.com/nfriedly/node-unblocker/blob/master/examples/youtube/youtube.js), it replaces youtube.com video pages with a custom page that just streams the video (but actually works). 
+cd to the directory where you are hosting this, with apache2, the default is "/var/www/html".
 
-To disable it just add `//` to the beginning of [this line of code in app.js](https://github.com/nfriedly/nodeunblocker.com/blob/5355bbfa8cfe2b5d2e6e5aae41ea21936a3be9a5/app.js#L59) like so:
+Make sure NPM has adequate access.
 
-```js
-//        youtube.processRequest
-```
+run "npm install" and wait for it to finish.
 
-## Running the website on your computer
+run "screen npm start" and the site is live.
 
-1. Install [node.js](http://nodejs.org/)
-2. [Download the code](https://github.com/nfriedly/nodeunblocker.com/archive/master.zip)
-3. Unzip it
-4. Open up a terminal/command line
-5. `cd` into the directory
-6. Run `npm install` to grab the dependencies.
-7. Run `npm start` to start the server. It should spawn a new instance for each CPU core you have.
+visit http://DOMAIN.COM:8080/ to view your site (NPM runs on 8080 by default, you can fix this with iptables if you wish)
 
-(Note: running `node app.js` *will not work*. The server code is in the [Gatling](https://npmjs.org/package/gatling)
-package, which the `npm start` command calls automatically.)
+For more information on Alloy Proxy. Please visit https://github.com/titaniumnetwork-dev/alloyproxy/blob/master/README.md
 
-After that, it will be live on your computer and accessible from your computer at http://localhost:8080/ - accessing it from another computer is beyond the scope of this guide, but it is possible.
+# Customize this site as your own!
+Maintainers will need to check all pages of this website and remove the following (not limited to this list) words, and replace them with their own terms:
 
-## Running the website on Heroku/Bluemix/Azure/AWS/etc
+TitaniumNetwork Unofficial Mirror
+MAINTAINER EMAIL
+MIRROR DOMAIN
 
-This project should be runnable without modification on a free [Heroku](http://www.heroku.com/) instance, as well as many other cloud providers. Clone/download the code and deploy it, or just click one of the buttons above.
+# Add your contact information and about Information
+Please make it possible to contact you, both for legal reasons and your users may need support down the line
 
-# About the project
+# Please follow the licensing
+This work is licensed in order to ensure there will be no misuse of the code.
 
-The the core of the nodeunblocker.com has been extracted into a [standalone library](https://github.com/nfriedly/node-unblocker) to make it more flexible, but everything you need to run the website is right here.
-
-This project is released under the terms of the [GNU Affero General Public License version 3](https://www.gnu.org/licenses/agpl-3.0.html).
-
-All source code is copyright [Nathan Friedly](http://nfriedly.com/).
+# This will be open source forever
